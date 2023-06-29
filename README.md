@@ -2,9 +2,22 @@
 [Link to Paper](https://arxiv.org/abs/2306.13907)
 
 **Authers**:
-- Yuval Ringel: [yuvalringel@mail.tau.ac.il](mailto:yuvalringel@mail.tau.ac.il)
 - Tuval Kay: [tuvalkay@mail.tau.ac.il](mailto:tuvalkay@mail.tau.ac.il)
-- the authers equally contributed to the work 
+- Yuval Ringel: [yuvalringel@mail.tau.ac.il](mailto:yuvalringel@mail.tau.ac.il)
+- - the authers equally contributed to the work 
+
+If you find our work useful, please consider citing our research paper:
+BibTeX format:
+
+@article{kay2023person,
+  title={Person Recognition using Facial Micro-Expressions with Deep Learning},
+  author={Kay, Tuval and Ringel, Yuval and Cohen, Khen and Azulay, Mor-Avi and Mendlovic, David},
+  year={2023},
+  journal={arXiv preprint arXiv:2306.13907},
+  eprint={2306.13907},
+  primaryClass={cs.CV},
+  url={https://doi.org/10.48550/arXiv.2306.13907}
+}
 
 
 ## Directory Structure
@@ -49,7 +62,6 @@ source /home/khen_proj_1/PycharmProjects/slowfast_test/venv/bin/activate
 ----------------------------------------------------
 ## 1) Create classesids files (json and txt), split data and create csv, copy files to general directory.
 
-----------------------------------------------------
 
 python /home/khen_proj_1/yuvaltuval/MicroExpressionsFaceRecognition/main_dir/main.py \
 --data CASME2 \
@@ -71,7 +83,7 @@ python /home/khen_proj_1/yuvaltuval/MicroExpressionsFaceRecognition/main_dir/mai
 ## 2) run svm. 
 make sure classes_ids_json_path is in accordance with step 1 copy directory
 note: step 2 wasn't used on the final project edition
-----------------------------------------------------
+
 
 python /home/khen_proj_1/yuvaltuval/MicroExpressionsFaceRecognition/model/classifier.py \
 --dataset SAMM \
@@ -103,7 +115,6 @@ python /home/khen_proj_1/yuvaltuval/MicroExpressionsFaceRecognition/model/classi
 ----------------------------------------------------
 ## 3) run SlowFast batch.
 
-----------------------------------------------------
 
 python /home/khen_proj_1/yuvaltuval/MicroExpressionsFaceRecognition/model/slowfast.py \
 --cfg /home/khen_proj_1/PycharmProjects/slowfast_test/slowfast/configs/MicroExpressions/SLOWFAST_8x8_R50_stepwise_multigrid.yaml \
@@ -131,8 +142,8 @@ OUTPUT_DIR /home/khen_proj_1/yuvaltuval/MicroExpressionsFaceRecognition/output/S
 make sure y_lgbp_dir_path is in accordance with step 2 output directory.
 make sure y_slowfast_dir_path is in accordance with step 3 output directory.
 
-Notice: since LGBP is not in use in the final project, we performed the second execution command.
-----------------------------------------------------
+note: since LGBP is not in use in the final project, we performed the second execution command.
+
 
 python /home/khen_proj_1/yuvaltuval/MicroExpressionsFaceRecognition/model/fusion.py \
 --dataset SAMM \
