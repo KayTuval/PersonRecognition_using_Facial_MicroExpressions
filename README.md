@@ -1,15 +1,17 @@
-Person Recognition using Facial Micro-Expressions with Deep Learning
-https://arxiv.org/abs/2306.13907
+# Person Recognition using Facial Micro-Expressions with Deep Learning
+[Link to Paper](https://arxiv.org/abs/2306.13907)
 
-Submitters:
-Yuval Ringel, yuvalringel@mail.tau.ac.il
-Tuval Kay, tuvalkay@mail.tau.ac.il
+**Authers**:
+- Yuval Ringel: [yuvalringel@mail.tau.ac.il](mailto:yuvalringel@mail.tau.ac.il)
+- Tuval Kay: [tuvalkay@mail.tau.ac.il](mailto:tuvalkay@mail.tau.ac.il)
+- the authers equally contributed to the work 
 
 
-The following folder contains 3 folders:
+## Directory Structure
+This project contains three main directories:
 	
 - MicroExpressionsCode:
-	This fodler contains all the code related to our work on the paper submitted (except SlowFast open source code that is in 'SlowFast Code' folder).
+	This folder contains all the code related to our work on the paper submitted (except SlowFast open source code that is in 'SlowFast Code' folder).
 	
 - SlowFastCode:
 	This folder contains a link to SlowFast's repo in github alongside with our additions and modifications.
@@ -22,12 +24,9 @@ Each folder has it's own `.txt` with more details.
 
 
 
-----------------------------------------------------
-----------------------------------------------------
-                General Workflow
-----------------------------------------------------
-----------------------------------------------------
-Before Running:
+## General Workflow
+### Prerequisites
+Before running the code, ensure:
 
 1) Make sure there's a directory with: train.csv, test.csv, validation.csv, calsses.txt, classes.json in '/output/classes/'
 2) Make sure the number of classes in slowfast config file matches the number of classes in classes.json that in the output directory
