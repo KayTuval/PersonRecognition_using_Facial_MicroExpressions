@@ -4,14 +4,14 @@
 **Authers**:
 - Tuval Kay: [tuvalkay@mail.tau.ac.il](mailto:tuvalkay@mail.tau.ac.il)
 - Yuval Ringel: [yuvalringel@mail.tau.ac.il](mailto:yuvalringel@mail.tau.ac.il)
-- - the authers equally contributed to the work 
+- the authers equally contributed to the work 
 
-If you find our work useful, please consider citing our research paper:
-BibTeX format:
+### If you find our work useful, please consider citing our research paper:
+ - BibTeX format:
 
 @article{kay2023person,
   title={Person Recognition using Facial Micro-Expressions with Deep Learning},
-  author={Kay, Tuval and Ringel, Yuval and Cohen, Khen and Azulay, Mor-Avi and Mendlovic, David},
+  author={Kay Tuval, Ringel Yuval, Cohen Khen, Azulay Mor-Avi, Mendlovic David},
   year={2023},
   journal={arXiv preprint arXiv:2306.13907},
   eprint={2306.13907},
