@@ -1,0 +1,30 @@
+This folfer contains the following files:
+
+- main_dir:
+	- main.py: Designed to be executed form the command line. Preprocess execution. 
+				According to the different args, this file creates the videos, split to train, validation and test sets and more actions.
+	- consts.py: Consts variables that are shared throughout the entire projects files.
+	
+- datasets:
+	- DatasetUtils.py: This file holds a major role in preprocessing the data. It loads the databases' csv files, make it neat and ready for work, creates the videos and prepare everything to the model executions
+	- DatasetAugmentation.py (deprecated): In charge of augmenting the data to achieve better results. The code works but wasn't in use in the final edition of the project.
+	
+- khen_hardware_libs:
+	This folder contains helper functions and code design to ease the work of the CV laboratory. Written by Khen Cohen.
+	We used a few functions from there, mostly video related.
+	
+- model:
+	- slowfast.py: Designed to be executed form the command line.
+					This code receive hyper parameters values for the SlowFast model, creates different permutations of it and execute SlowFast model for each permutation.
+	- me_slowfast_extras.py: Extra functions designed to adapt the open source SlowFast model to our needs.
+	
+	- fusion.py: Designed to be executed form the command line. Perform different fusion methods and ensemble on the models outputs.
+	- fusion_analysis.py: Behaves as a .ipynb file (notebook). Contains small calcultaions on different fusions done with the outputs in comments.
+	
+	- classifier.py: Designed to be executed form the command line. Run a classifier (svm) on specific data. This code receive hyper parameters values for the classifier, creates different permutations of it and execute it for each permutation. The code works but wasn't in use in the final edition of the project
+	- svm.py: This code execute SVM model on given data.
+	
+	- lbp.py: Create LBP (or LGBP) histograms of given data (can be used in the preprocesing).
+	- lgbp.py (deprecated): premature edition of a file that meant to create LGBP histograms on given data. abandoned for `lbp.py`.
+	
+	- utils.py: Utility helper functions being used in different files.
