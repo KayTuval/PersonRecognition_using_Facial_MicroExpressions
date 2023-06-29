@@ -81,10 +81,11 @@ python /home/khen_proj_1/yuvaltuval/MicroExpressionsFaceRecognition/main_dir/mai
 
 ----------------------------------------------------
 ## 2) run svm. 
-make sure classes_ids_json_path is in accordance with step 1 copy directory
+Make sure classes_ids_json_path is in accordance with step 1 copy directory
 note: step 2 wasn't used on the final project edition
 
-
+### Replace paths and parameters as needed
+#### For SAMM data
 python /home/khen_proj_1/yuvaltuval/MicroExpressionsFaceRecognition/model/classifier.py \
 --dataset SAMM \
 --split_data load \
@@ -97,7 +98,7 @@ python /home/khen_proj_1/yuvaltuval/MicroExpressionsFaceRecognition/model/classi
 --gamma scale auto 0.01 0.1 1 10 100 \
 --degree 0 1 2 3
 
-
+#### For CASME2 data
 python /home/khen_proj_1/yuvaltuval/MicroExpressionsFaceRecognition/model/classifier.py \
 --dataset CASME2 \
 --split_data load \
@@ -114,7 +115,7 @@ python /home/khen_proj_1/yuvaltuval/MicroExpressionsFaceRecognition/model/classi
 
 ----------------------------------------------------
 ## 3) run SlowFast batch.
-
+### Replace paths and parameters as needed
 
 python /home/khen_proj_1/yuvaltuval/MicroExpressionsFaceRecognition/model/slowfast.py \
 --cfg /home/khen_proj_1/PycharmProjects/slowfast_test/slowfast/configs/MicroExpressions/SLOWFAST_8x8_R50_stepwise_multigrid.yaml \
@@ -139,12 +140,12 @@ OUTPUT_DIR /home/khen_proj_1/yuvaltuval/MicroExpressionsFaceRecognition/output/S
 
 ----------------------------------------------------
 ## 4) Perofrm fusion.
-make sure y_lgbp_dir_path is in accordance with step 2 output directory.
-make sure y_slowfast_dir_path is in accordance with step 3 output directory.
+Ensure y_lgbp_dir_path aligns with step 2 output directory, and y_slowfast_dir_path aligns with step 3 output directory.
 
 note: since LGBP is not in use in the final project, we performed the second execution command.
 
-
+### Replace paths and parameters as needed
+#### For SAMM data
 python /home/khen_proj_1/yuvaltuval/MicroExpressionsFaceRecognition/model/fusion.py \
 --dataset SAMM \
 --y_true_path /home/khen_proj_1/yuvaltuval/MicroExpressionsFaceRecognition/output/classes/2022-06-23_13:00/SAMM/test.csv \
@@ -153,10 +154,18 @@ python /home/khen_proj_1/yuvaltuval/MicroExpressionsFaceRecognition/model/fusion
 --output_path /home/khen_proj_1/yuvaltuval/MicroExpressionsFaceRecognition/output/Fusion/2022-06-23_13:00/ \ 
 --slowfast_duplications 2 \ 
 
-
+#### For CASME2 data
 python /home/khen_proj_1/yuvaltuval/MicroExpressionsFaceRecognition/model/fusion.py \
 --dataset CASME2 \
 --y_true_path /home/khen_proj_1/yuvaltuval/MicroExpressionsFaceRecognition/output/classes/2022-08-29_08:00_CASME2/CASME2/test.csv \
 --y_slowfast_dir_path /home/khen_proj_1/yuvaltuval/MicroExpressionsFaceRecognition/output/SlowFast/2022-08-29_08:00_CASME2/ \
 --output_path /home/khen_proj_1/yuvaltuval/MicroExpressionsFaceRecognition/output/Fusion/2022-08-29_08:00_CASME2/ \ 
 --slowfast_duplications 2 \ 
+
+----------------------------------------------------
+## 5) Grad-CAM.
+### Replace paths as needed
+python /home/khen_proj_1/yuvaltuval/MicroExpressionsFaceRecognition/model/grad_cam.py \
+--cfg /home/khen_proj_1/PycharmProjects/slowfast_test/slowfast/configs/MicroExpressions/SLOWFAST_8x8_R50_stepwise_multigrid.yaml \
+--output_dir /home/khen_proj_1/yuvaltuval/MicroExpressionsFaceRecognition/output/SlowFast/2022-07-08_11:00 \
+--n 1 5 10
