@@ -47,7 +47,8 @@ To activate the virtual environment execute:
 source /home/khen_proj_1/PycharmProjects/slowfast_test/venv/bin/activate
 
 ----------------------------------------------------
-1) Create classesids files (json and txt), split data and create csv, copy files to general directory
+## 1) Create classesids files (json and txt), split data and create csv, copy files to general directory.
+
 ----------------------------------------------------
 
 python /home/khen_proj_1/yuvaltuval/MicroExpressionsFaceRecognition/main_dir/main.py \
@@ -67,9 +68,9 @@ python /home/khen_proj_1/yuvaltuval/MicroExpressionsFaceRecognition/main_dir/mai
 
 
 ----------------------------------------------------
-(not in use in the final project edition)
-2) run svm. 
+## 2) run svm. 
 make sure classes_ids_json_path is in accordance with step 1 copy directory
+note: step 2 wasn't used on the final project edition
 ----------------------------------------------------
 
 python /home/khen_proj_1/yuvaltuval/MicroExpressionsFaceRecognition/model/classifier.py \
@@ -100,7 +101,8 @@ python /home/khen_proj_1/yuvaltuval/MicroExpressionsFaceRecognition/model/classi
 
 
 ----------------------------------------------------
-3) run SlowFast batch.
+## 3) run SlowFast batch.
+
 ----------------------------------------------------
 
 python /home/khen_proj_1/yuvaltuval/MicroExpressionsFaceRecognition/model/slowfast.py \
@@ -125,7 +127,7 @@ OUTPUT_DIR /home/khen_proj_1/yuvaltuval/MicroExpressionsFaceRecognition/output/S
 
 
 ----------------------------------------------------
-4) Perofrm fusion.
+## 4) Perofrm fusion.
 make sure y_lgbp_dir_path is in accordance with step 2 output directory.
 make sure y_slowfast_dir_path is in accordance with step 3 output directory.
 
